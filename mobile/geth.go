@@ -1,18 +1,18 @@
-// Copyright 2016 The go-auc Authors
-// This file is part of the go-auc library.
+// Copyright 2016 The cubitchain Authors
+// This file is part of the cubitchain library.
 //
-// The go-auc library is free software: you can redistribute it and/or modify
+// The cubitchain library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-auc library is distributed in the hope that it will be useful,
+// The cubitchain library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-auc library. If not, see <http://www.gnu.org/licenses/>.
+// along with the cubitchain library. If not, see <http://www.gnu.org/licenses/>.
 
 // Contains all the wrappers from the node package to support client side node
 // management on mobile platforms.
@@ -40,7 +40,7 @@ import (
 
 // NodeConfig represents the collection of configuration values to fine tune the Geth
 // node embedded into a mobile process. The available values are a subset of the
-// entire API provided by go-auc to reduce the maintenance surface and dev
+// entire API provided by cubitchain to reduce the maintenance surface and dev
 // complexity.
 type NodeConfig struct {
 	// Bootstrap nodes used to establish connectivity with the rest of the network.

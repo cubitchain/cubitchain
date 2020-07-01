@@ -1,18 +1,18 @@
-// Copyright 2015 The go-auc Authors
-// This file is part of the go-auc library.
+// Copyright 2015 The cubitchain Authors
+// This file is part of the cubitchain library.
 //
-// The go-auc library is free software: you can redistribute it and/or modify
+// The cubitchain library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-auc library is distributed in the hope that it will be useful,
+// The cubitchain library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-auc library. If not, see <http://www.gnu.org/licenses/>.
+// along with the cubitchain library. If not, see <http://www.gnu.org/licenses/>.
 
 package eth
 
@@ -92,9 +92,9 @@ func (rw *meteredMsgReadWriter) ReadMsg() (p2p.Msg, error) {
 	case msg.Code == BlockBodiesMsg:
 		packets, traffic = reqBodyInPacketsMeter, reqBodyInTrafficMeter
 
-	case rw.version >= auc63 && msg.Code == NodeDataMsg:
+	case rw.version >= qbc63 && msg.Code == NodeDataMsg:
 		packets, traffic = reqStateInPacketsMeter, reqStateInTrafficMeter
-	case rw.version >= auc63 && msg.Code == ReceiptsMsg:
+	case rw.version >= qbc63 && msg.Code == ReceiptsMsg:
 		packets, traffic = reqReceiptInPacketsMeter, reqReceiptInTrafficMeter
 
 	case msg.Code == NewBlockHashesMsg:
@@ -119,9 +119,9 @@ func (rw *meteredMsgReadWriter) WriteMsg(msg p2p.Msg) error {
 	case msg.Code == BlockBodiesMsg:
 		packets, traffic = reqBodyOutPacketsMeter, reqBodyOutTrafficMeter
 
-	case rw.version >= auc63 && msg.Code == NodeDataMsg:
+	case rw.version >= qbc63 && msg.Code == NodeDataMsg:
 		packets, traffic = reqStateOutPacketsMeter, reqStateOutTrafficMeter
-	case rw.version >= auc63 && msg.Code == ReceiptsMsg:
+	case rw.version >= qbc63 && msg.Code == ReceiptsMsg:
 		packets, traffic = reqReceiptOutPacketsMeter, reqReceiptOutTrafficMeter
 
 	case msg.Code == NewBlockHashesMsg:

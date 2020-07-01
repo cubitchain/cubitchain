@@ -1,18 +1,18 @@
-// Copyright 2014 The go-auc Authors
-// This file is part of go-auc.
+// Copyright 2014 The cubitchain Authors
+// This file is part of cubitchain.
 //
-// go-auc is free software: you can redistribute it and/or modify
+// cubitchain is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// go-auc is distributed in the hope that it will be useful,
+// cubitchain is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with go-auc. If not, see <http://www.gnu.org/licenses/>.
+// along with cubitchain. If not, see <http://www.gnu.org/licenses/>.
 
 // geth is the official command-line client for Ethereum.
 package main
@@ -49,7 +49,7 @@ var (
 	// Git SHA1 commit hash of the release (set via linker flags)
 	gitCommit = ""
 	// The app that holds all commands and flags.
-	app = utils.NewApp(gitCommit, "the go-auc command line interface")
+	app = utils.NewApp(gitCommit, "the cubitchain command line interface")
 	// flags that configure the node
 	nodeFlags = []cli.Flag{
 		utils.IdentityFlag,
@@ -176,7 +176,7 @@ func init() {
 	// Initialize the CLI app and start Geth
 	app.Action = geth
 	app.HideVersion = true // we have a command to print the version
-	app.Copyright = "Copyright 2013-2019 The go-ethereum & go-auc Authors"
+	app.Copyright = "Copyright 2013-2019 The go-ethereum & cubitchain Authors"
 	app.Commands = []cli.Command{
 		// See chaincmd.go:
 		initCommand,

@@ -1,18 +1,18 @@
-// Copyright 2014 The go-auc Authors
-// This file is part of the go-auc library.
+// Copyright 2014 The cubitchain Authors
+// This file is part of the cubitchain library.
 //
-// The go-auc library is free software: you can redistribute it and/or modify
+// The cubitchain library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-auc library is distributed in the hope that it will be useful,
+// The cubitchain library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-auc library. If not, see <http://www.gnu.org/licenses/>.
+// along with the cubitchain library. If not, see <http://www.gnu.org/licenses/>.
 
 package eth
 
@@ -30,16 +30,16 @@ import (
 
 // Constants to match up protocol versions and messages
 const (
-	auc62 = 62
-	auc63 = 63
-	auc64 = 64
+	qbc62 = 62
+	qbc63 = 63
+	qbc64 = 64
 )
 
 // ProtocolName is the official short name of the protocol used during capability negotiation.
-var ProtocolName = "auc"
+var ProtocolName = "qbc"
 
 // ProtocolVersions are the supported versions of the eth protocol (first is primary).
-var ProtocolVersions = []uint{auc64, auc63, auc62}
+var ProtocolVersions = []uint{qbc64, qbc63, qbc62}
 
 // ProtocolLengths are the number of implemented message corresponding to different protocol versions.
 var ProtocolLengths = []uint64{35, 17, 8}

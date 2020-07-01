@@ -1,18 +1,18 @@
-// Copyright 2015 The go-auc Authors
-// This file is part of the go-auc library.
+// Copyright 2015 The cubitchain Authors
+// This file is part of the cubitchain library.
 //
-// The go-auc library is free software: you can redistribute it and/or modify
+// The cubitchain library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-auc library is distributed in the hope that it will be useful,
+// The cubitchain library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-auc library. If not, see <http://www.gnu.org/licenses/>.
+// along with the cubitchain library. If not, see <http://www.gnu.org/licenses/>.
 
 package eth
 
@@ -532,7 +532,7 @@ func testCheckpointChallenge(t *testing.T, syncmode downloader.SyncMode, checkpo
 	defer pm.Stop()
 
 	// Connect a new peer and check that we receive the checkpoint challenge
-	peer, _ := newTestPeer("peer", auc63, pm, true)
+	peer, _ := newTestPeer("peer", qbc63, pm, true)
 	defer peer.close()
 
 	if checkpoint {
@@ -619,7 +619,7 @@ func testBroadcastBlock(t *testing.T, totalPeers, broadcastExpected int) {
 	defer pm.Stop()
 	var peers []*testPeer
 	for i := 0; i < totalPeers; i++ {
-		peer, _ := newTestPeer(fmt.Sprintf("peer %d", i), auc63, pm, true)
+		peer, _ := newTestPeer(fmt.Sprintf("peer %d", i), qbc63, pm, true)
 		defer peer.close()
 		peers = append(peers, peer)
 	}

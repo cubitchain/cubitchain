@@ -1,18 +1,18 @@
-// Copyright 2018 The go-auc Authors
-// This file is part of go-auc.
+// Copyright 2018 The cubitchain Authors
+// This file is part of cubitchain.
 //
-// go-auc is free software: you can redistribute it and/or modify
+// cubitchain is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// go-auc is distributed in the hope that it will be useful,
+// cubitchain is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with go-auc. If not, see <http://www.gnu.org/licenses/>.
+// along with cubitchain. If not, see <http://www.gnu.org/licenses/>.
 
 package main
 
@@ -28,7 +28,7 @@ import (
 	"github.com/cubitchain/cubitchain/core"
 )
 
-// Tests the go-auc to Aleth chainspec conversion for the Stureby testnet.
+// Tests the cubitchain to Aleth chainspec conversion for the Stureby testnet.
 func TestAlethSturebyConverter(t *testing.T) {
 	blob, err := ioutil.ReadFile("testdata/stureby_geth.json")
 	if err != nil {
@@ -67,7 +67,7 @@ func TestAlethSturebyConverter(t *testing.T) {
 	}
 }
 
-// Tests the go-auc to Parity chainspec conversion for the Stureby testnet.
+// Tests the cubitchain to Parity chainspec conversion for the Stureby testnet.
 func TestParitySturebyConverter(t *testing.T) {
 	blob, err := ioutil.ReadFile("testdata/stureby_geth.json")
 	if err != nil {

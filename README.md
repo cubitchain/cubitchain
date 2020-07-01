@@ -1,4 +1,4 @@
-## cubitchain
+## Cubit Chain
 
 Official golang implementation of the cubitchain protocol.
 
@@ -12,7 +12,7 @@ Once the dependencies are installed, run
 
 ## Running geth
 
-### Full node on the main Ethereum network
+### Full node on the main Cubitchain network
 
 By far the most common scenario is people wanting to simply interact with the cubitchain network:
 create accounts; transfer funds; deploy and interact with contracts. For this particular use-case

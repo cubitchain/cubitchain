@@ -1,18 +1,18 @@
-// Copyright 2015 The go-auc Authors
-// This file is part of the go-auc library.
+// Copyright 2015 The cubitchain Authors
+// This file is part of the cubitchain library.
 //
-// The go-auc library is free software: you can redistribute it and/or modify
+// The cubitchain library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-auc library is distributed in the hope that it will be useful,
+// The cubitchain library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-auc library. If not, see <http://www.gnu.org/licenses/>.
+// along with the cubitchain library. If not, see <http://www.gnu.org/licenses/>.
 
 package eth
 
@@ -138,7 +138,7 @@ func NewProtocolManager(config *params.ChainConfig, mode downloader.SyncMode, ne
 	manager.SubProtocols = make([]p2p.Protocol, 0, len(ProtocolVersions))
 	for i, version := range ProtocolVersions {
 		// Skip protocol version if incompatible with the mode of operation
-		if mode == downloader.FastSync && version < auc63 {
+		if mode == downloader.FastSync && version < qbc63 {
 			continue
 		}
 		// Compatible; initialise the sub-protocol
@@ -546,7 +546,7 @@ func (pm *ProtocolManager) handleMsg(p *peer) error {
 			}
 		}
 
-	case p.version >= auc63 && msg.Code == GetNodeDataMsg:
+	case p.version >= qbc63 && msg.Code == GetNodeDataMsg:
 		// Decode the retrieval message
 		msgStream := rlp.NewStream(msg.Payload, uint64(msg.Size))
 		if _, err := msgStream.List(); err != nil {
@@ -573,7 +573,7 @@ func (pm *ProtocolManager) handleMsg(p *peer) error {
 		}
 		return p.SendNodeData(data)
 
-	case p.version >= auc63 && msg.Code == NodeDataMsg:
+	case p.version >= qbc63 && msg.Code == NodeDataMsg:
 		// A batch of node state data arrived to one of our previous requests
 		var data [][]byte
 		if err := msg.Decode(&data); err != nil {
@@ -584,7 +584,7 @@ func (pm *ProtocolManager) handleMsg(p *peer) error {
 			log.Debug("Failed to deliver node state data", "err", err)
 		}
 
-	case p.version >= auc63 && msg.Code == GetReceiptsMsg:
+	case p.version >= qbc63 && msg.Code == GetReceiptsMsg:
 		// Decode the retrieval message
 		msgStream := rlp.NewStream(msg.Payload, uint64(msg.Size))
 		if _, err := msgStream.List(); err != nil {
@@ -620,7 +620,7 @@ func (pm *ProtocolManager) handleMsg(p *peer) error {
 		}
 		return p.SendReceiptsRLP(receipts)
 
-	case p.version >= auc63 && msg.Code == ReceiptsMsg:
+	case p.version >= qbc63 && msg.Code == ReceiptsMsg:
 		// A batch of receipts arrived to one of our previous requests
 		var receipts [][]*types.Receipt
 		if err := msg.Decode(&receipts); err != nil {
