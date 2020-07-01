@@ -6,8 +6,8 @@ import (
 	"github.com/cubitchain/cubitchain/common"
 )
 
-// Max = (EXP(−1÷(AUC×50)×10000)×10000000+200000) * 18
-// Speed = (EXP(−1÷(AUC×2)×1000)×200000+1000) * 18
+// Max = (EXP(−1÷(qbc×50)×10000)×10000000+200000) * 18
+// Speed = (EXP(−1÷(qbc×2)×1000)×200000+1000) * 18
 func CalculatePower(prevBlock, newBlock, prevPower, balance *big.Int) *big.Int {
 	if balance.Cmp(big.NewInt(1e+18)) < 0 {
 		return common.Big0

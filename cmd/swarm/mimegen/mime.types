@@ -328,7 +328,7 @@ application/srgs+xml				grxml
 application/sru+xml				sru
 application/ssml+xml				ssml
 application/tamp-apex-update			tau
-application/tamp-apex-update-confirm		auc
+application/tamp-apex-update-confirm		qbc
 application/tamp-community-update		tcu
 application/tamp-community-update-confirm	cuc
 application/tamp-error				ter

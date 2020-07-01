@@ -1,4 +1,4 @@
-// Copyright 2016 The auc Authors
+// Copyright 2016 The qbc Authors
 // This file is part of the cubitchain library.
 //
 // The cubitchain library is free software: you can redistribute it and/or modify

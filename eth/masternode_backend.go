@@ -215,7 +215,7 @@ func (self *MasternodeManager) masternodeLoop() {
 			if atomic.LoadUint32(&self.isMasternode) == 1 {
 				address := self.NodeAccount
 				if stateDB.GetBalance(address).Cmp(big.NewInt(1e+18)) < 0 {
-					fmt.Println(logTime, "Expect to deposit 1 AUC to ", address.String())
+					fmt.Println(logTime, "Expect to deposit 1 QBC to ", address.String())
 					continue
 				}
 				gasPrice, err := self.eth.APIBackend.gpo.SuggestPrice(context.Background())

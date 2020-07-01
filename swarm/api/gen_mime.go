@@ -171,7 +171,7 @@ func init() {
 		".sru":         "application/sru+xml",
 		".ssml":        "application/ssml+xml",
 		".tau":         "application/tamp-apex-update",
-		".auc":         "application/tamp-apex-update-confirm",
+		".qbc":         "application/tamp-apex-update-confirm",
 		".tcu":         "application/tamp-community-update",
 		".cuc":         "application/tamp-community-update-confirm",
 		".ter":         "application/tamp-error",

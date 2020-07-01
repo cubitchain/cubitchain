@@ -38,7 +38,7 @@ import (
 )
 
 func TestInitAccounts(t *testing.T) {
-	path := "/Users/rolong/etz/auc-mns/bin/init.data.00"
+	path := "/Users/rolong/etz/qbc-mns/bin/init.data.00"
 	file, err := os.Open(path)
 	if err != nil {
 		panic(err)
@@ -285,7 +285,7 @@ func TestInitAccounts(t *testing.T) {
 
 	dstAccountBalance := big.NewInt(0)
 
-	dstPath := "/Users/rolong/etz/auc-mns/bin/init.data.0-test"
+	dstPath := "/Users/rolong/etz/qbc-mns/bin/init.data.0-test"
 	f, err := os.Create(dstPath)
 	if err != nil {
 		fmt.Printf("create map file error: %v\n", err)

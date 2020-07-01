@@ -1,7 +1,7 @@
-// Copyright 2016 The auc Authors
-// This file is part of the auc library.
+// Copyright 2016 The qbc Authors
+// This file is part of the qbc library.
 //
-// The auc library is free software: you can redistribute it and/or modify
+// The qbc library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.

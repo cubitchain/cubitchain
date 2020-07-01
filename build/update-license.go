@@ -1,18 +1,18 @@
-// Copyright 2018 The auc Authors
-// This file is part of the auc library.
+// Copyright 2018 The qbc Authors
+// This file is part of the qbc library.
 //
-// The auc library is free software: you can redistribute it and/or modify
+// The qbc library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The auc library is distributed in the hope that it will be useful,
+// The qbc library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the auc library. If not, see <http://www.gnu.org/licenses/>.
+// along with the qbc library. If not, see <http://www.gnu.org/licenses/>.
 
 // +build none
 
@@ -84,13 +84,13 @@ var (
 	licenseCommentRE = regexp.MustCompile(`^//\s*(Copyright|This file is part of).*?\n(?://.*?\n)*\n*`)
 
 	// this text appears at the start of AUTHORS
-	authorsFileHeader = "# This is the official list of auc authors for copyright purposes.\n\n"
+	authorsFileHeader = "# This is the official list of qbc authors for copyright purposes.\n\n"
 )
 
 // this template generates the license comment.
 // its input is an info structure.
 var licenseT = template.Must(template.New("").Parse(`
-// Copyright {{.Year}} The auc Authors
+// Copyright {{.Year}} The qbc Authors
 // This file is part of {{.Whole false}}.
 //
 // {{.Whole true}} is free software: you can redistribute it and/or modify
@@ -129,12 +129,12 @@ func (i info) ShortLicense() string {
 
 func (i info) Whole(startOfSentence bool) string {
 	if i.gpl() {
-		return "auc"
+		return "qbc"
 	}
 	if startOfSentence {
-		return "The auc library"
+		return "The qbc library"
 	}
-	return "the auc library"
+	return "the qbc library"
 }
 
 func (i info) gpl() bool {
